@@ -1,6 +1,7 @@
 var express = require("express"); 
 var bodyParser = require("body-parser");
 var User = require("./models/user").User;
+var Cliente = require("./models/clientes").Cliente;
 var cookieSession = require("cookie-session"); 
 var router_app = require("./router_app");
 var session_middleware = require("./middlewares/session");
@@ -47,6 +48,9 @@ app.get("/app/corte",function(req,res){
 	res.render("app/corte/fcorte");
 });
 
+app.get("/app/cliente", function(req,res){
+	res.render("app/corte/cliente");
+})
 
 
 app.post("/users",function(req,res){
