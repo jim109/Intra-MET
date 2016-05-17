@@ -1,115 +1,115 @@
 extends ../../layout.jade
 block contenido
-	form#f_corte(method='get')
-		div
-			label FORMATO ORDEN DE CORTE N:
-			input(type='text', name='o_numero', size='6')
-		div
+	form(class="col-md-6 remove-float center-block big-top-space")
+		div(class="form-group")
+			label(for="c_fcorte") FORMATO ORDEN DE CORTE N:
+			input(type='text' name='o_numero' id="c_fcorte")
+		div(class="form-group")
 			div
-				label Cliente:
-				input(type="text" name="c_numero" size="26")
-				label Referencia:
-				input(type="text" name="c_referencia" size="26")
+				label(for="c_cliente") Cliente:
+				input(type="text" name="c_numero" placeholder="Nombre del Cliente" id="c_cliente")
+				label(for="c_referencia") Referencia:
+				input(type="text" name="c_referencia" placeholder="Referencia del Patron" id="c_referencia")
 			div
-				label Valor Cliente:
-				input(type="text" name="c_v_cliente" )
-				label Valor Cortador:
-				input(type="text" name="c_v_cortador" size="6")
-				label Patronista:
-				input(type="text" name="c_patronista" size="6")
+				label(for="c_v_cliente") Valor Cliente:
+				input(type="text" name="c_v_cliente" placeholder="Valor del Corte" id="c_v_cliente")
+				label(for="c_v_cortador") Valor Cortador:
+				input(type="text" name="c_v_cortador" placeholder="Valor al Cortador" id="c_v_cortador")
+				label(for="c_patronista") Patronista:
+				input(type="text" name="c_patronista" placeholder="Nombre Patronista" id="c_patronista")
 			div
-				label Fecha Recibido:
-				input(type="text" name="c_f_recibido" size="16")
-				label Fecha Entrega:
-				input(type="text" name="c_numero" size="6")
+				label(for="c_f_recibido") Fecha Recibido:
+				input(type="text" name="c_f_recibido" id="c_f_recibido")
+				label(for="c_numero") Fecha Entrega:
+				input(type="text" name="c_numero" id="c_numero")
 			div
 				label Tallas:
-				input(type="text" name="c_tallas1" size="2")
-				input(type="text" name="c_tallas2" size="2")
-				input(type="text" name="c_tallas3" size="2")
-				input(type="text" name="c_tallas4" size="2")
-				input(type="text" name="c_tallas5" size="2")
-				input(type="text" name="c_tallas6" size="2")
-				input(type="text" name="c_tallas7" size="2")
-				input(type="text" name="c_tallas8" size="2")
-				input(type="text" name="c_tallas9" size="2")
-				input(type="text" name="c_tallas10" size="2")
+				input(type="text" name="c_tallas1" id="c_tallas1" size="2")
+				input(type="text" name="c_tallas2" id="c_tallas2" size="2")
+				input(type="text" name="c_tallas3" id="c_tallas3" size="2")
+				input(type="text" name="c_tallas4" id="c_tallas4" size="2")
+				input(type="text" name="c_tallas5" id="c_tallas5" size="2")
+				input(type="text" name="c_tallas6" id="c_tallas6" size="2")
+				input(type="text" name="c_tallas7" id="c_tallas7" size="2")
+				input(type="text" name="c_tallas8" id="c_tallas8" size="2")
+				input(type="text" name="c_tallas9" id="c_tallas9" size="2")
+				input(type="text" name="c_tallas10" id="c_tallas10" size="2")
 			div
 				label Cantidad Propuestas:
-				input(type="text" name="c_p1" size="2")
-				input(type="text" name="c_p2" size="2")
-				input(type="text" name="c_p3" size="2")
-				input(type="text" name="c_p4" size="2")
-				input(type="text" name="c_p5" size="2")
-				input(type="text" name="c_p6" size="2")
-				input(type="text" name="c_p7" size="2")
-				input(type="text" name="c_p8" size="2")
-				input(type="text" name="c_p9" size="2")
-				input(type="text" name="c_p10" size="2")
+				input(type="text" name="c_p1" id="c_p1" size="2")
+				input(type="text" name="c_p2" id="c_p2" size="2")
+				input(type="text" name="c_p3" id="c_p3" size="2")
+				input(type="text" name="c_p4" id="c_p4" size="2")
+				input(type="text" name="c_p5" id="c_p5" size="2")
+				input(type="text" name="c_p6" id="c_p6" size="2")
+				input(type="text" name="c_p7" id="c_p7" size="2")
+				input(type="text" name="c_p8" id="c_p8" size="2")
+				input(type="text" name="c_p9" id="c_p9" size="2")
+				input(type="text" name="c_p10" id="c_p10" size="2")
 				label Total:
-				input(type="text" name="c_total" size="2")
-		div
+				input(type="text" name="c_total" id="c_total" size="2")
+		div(class="form-group")
 			div
-				label Fecha de Entrega trazo a corte:
-				input(type="text" name="c_fentrega" size="36")
-				label Cantidad de piezas trazadas:
-				input(type="text" name="c_cant_piezas" size="36")
-		div
+				label(for="c_fentrega") Fecha de Entrega trazo a corte:
+				input(type="text" name="c_fentrega" id="c_fentrega")
+				label(for="c_cant_piezas") Cantidad de piezas trazadas:
+				input(type="text" name="c_cant_piezas" id="c_cant_piezas")
+		div(class="form-group")
 			div
-				label Fecha real entrega de corte:
-				input(type="text" name="c_total" size="25")
-				label Factura de Venta u Orden de Trabajo:
-				input(type="text" name="c_fventa" size="12")
+				label(for="c_total") Fecha real entrega de corte:
+				input(type="text" name="c_total" id="c_total")
+				label(for="c_fventa") Factura de Venta u Orden de Trabajo:
+				input(type="text" name="c_fventa" id="c_fventa")
 			div
 				label Tallas:
-				input(type="text" name="c_tallas_1" size="2")
-				input(type="text" name="c_tallas_2" size="2")
-				input(type="text" name="c_tallas_3" size="2")
-				input(type="text" name="c_tallas_4" size="2")
-				input(type="text" name="c_tallas_5" size="2")
-				input(type="text" name="c_tallas_6" size="2")
-				input(type="text" name="c_tallas_7" size="2")
-				input(type="text" name="c_tallas_8" size="2")
-				input(type="text" name="c_tallas_9" size="2")
-				input(type="text" name="c_tallas_10" size="2")
+				input(type="text" name="c_tallas_1" id="c_tallas1" size="2")
+				input(type="text" name="c_tallas_2" id="c_tallas2" size="2")
+				input(type="text" name="c_tallas_3" id="c_tallas_3" size="2")
+				input(type="text" name="c_tallas_4" id="c_tallas4" size="2")
+				input(type="text" name="c_tallas_5" id="c_tallas5" size="2")
+				input(type="text" name="c_tallas_6" id="c_tallas6" size="2")
+				input(type="text" name="c_tallas_7" id="c_tallas7" size="2")
+				input(type="text" name="c_tallas_8" id="c_tallas8" size="2")
+				input(type="text" name="c_tallas_9" id="c_tallas9" size="2")
+				input(type="text" name="c_tallas_10" id="c_tallas10" size="2")
 			div
 				label Cantidades Reales:
-				input(type="text" name="c_reales_1" size="2")
-				input(type="text" name="c_reales_2" size="2")
-				input(type="text" name="c_reales_3" size="2")
-				input(type="text" name="c_reales_4" size="2")
-				input(type="text" name="c_reales_5" size="2")
-				input(type="text" name="c_reales_6" size="2")
-				input(type="text" name="c_reales_7" size="2")
-				input(type="text" name="c_reales_8" size="2")
-				input(type="text" name="c_reales_9" size="2")
-				input(type="text" name="c_reales_10" size="2")
+				input(type="text" name="c_reales_1" id="c_reales_1" size="2")
+				input(type="text" name="c_reales_2" id="c_reales_2" size="2")
+				input(type="text" name="c_reales_3" id="c_reales_3" size="2")
+				input(type="text" name="c_reales_4" id="c_reales_4" size="2")
+				input(type="text" name="c_reales_5" id="c_reales_5" size="2")
+				input(type="text" name="c_reales_6" id="c_reales_6" size="2")
+				input(type="text" name="c_reales_7" id="c_reales_7" size="2")
+				input(type="text" name="c_reales_8" id="c_reales_8" size="2")
+				input(type="text" name="c_reales_9" id="c_reales_9" size="2")
+				input(type="text" name="c_reales_10" id="c_reales_10" size="2")
 			div
-				label Operador de Corte 1
-				input(type="text" name="c_ocorte1" size="12")
-				label Porcentaje
-				input(type="text" name="c_porcent1" size="12")
-				label Valor
-				input(type="text" name="c_valor1" size="12")
+				label(for="c_ocorte1") Operador de Corte 1
+				input(type="text" name="c_ocorte1" id="c_ocorte1")
+				label(for="c_porcent1") Porcentaje
+				input(type="text" name="c_porcent1" id="c_porcent1")
+				label(for"c_valor1") Valor
+				input(type="text" name="c_valor1" id="c_valor1")
 			div
-				label Operador de Corte 2
-				input(type="text" name="c_ocorte2" size="12")
-				label Porcentaje
-				input(type="text" name="c_porcent2" size="12")
-				label Valor
-				input(type="text" name="c_valor2" size="12")
+				label(for="c_ocorte2") Operador de Corte 2
+				input(type="text" name="c_ocorte2" id="c_ocorte2")
+				label(for="c_porcent2") Porcentaje
+				input(type="text" name="c_porcent2" c_porcent2)
+				label(for="c_valor2") Valor
+				input(type="text" name="c_valor2" id="c_valor2")
 			div
-				label Operador de Corte 3
-				input(type="text" name="c_ocorte3" size="12")
-				label Porcentaje
-				input(type="text" name="c_porcent3" size="12")
-				label Valor
-				input(type="text" name="c_valor3" size="12")
-		div
+				label(for="c_ocorte3") Operador de Corte 3
+				input(type="text" name="c_ocorte3" id="c_ocorte3")
+				label(for="c_porcent3") Porcentaje
+				input(type="text" name="c_porcent3" id="c_porcent3")
+				label(for="c_valor3") Valor
+				input(type="text" name="c_valor3" id="c_valor3")
+		div(class="form-group")
 			div
-				label OBSERVACIONES DEL CORTE
-				input(type="text" name="c_obs")
-		div
+				label(for="c_obs") OBSERVACIONES DEL CORTE
+				input(type="text" name="c_obs" placeholder="Tiene alguna Observacion sobre la Orden de Corte")
+		div(class="form-group")
 			div
 				input(type="button" onclick="alert('Desea Guardar" value="Guardar")
 

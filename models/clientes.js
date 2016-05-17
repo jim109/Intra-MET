@@ -1,6 +1,9 @@
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
+//mongoose.connect("mongodb://localhost/clientes");//creamos la conexion con mongodb y le damos la ruta que vamos a manejar si vamos a hacerlo en nuestro equipo seria desde localhost y el nombre del archivo que queremos colocar
+
+
 var email_match= [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,"Coloca un email valido"]
 
 var ClienteSchema = new Schema({
@@ -11,4 +14,6 @@ var ClienteSchema = new Schema({
 
 });
 
-mongoose.model('Cliente', ClienteSchema)
+var Cliente = mongoose.model("Cliente",ClienteSchema);
+
+module.exports = Cliente;
